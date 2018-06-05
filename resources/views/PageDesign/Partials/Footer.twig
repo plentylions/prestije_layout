@@ -108,6 +108,12 @@
         {% set cat = services.category.get(config('Ceres.global.category.legal_disclosure')) %}
         <div class="copyright text-xs-center m-y-1">
             <div class="static-link-list">
+                {% for i in 1..5 %}
+                    {% set flink = services.category.get(config("Prestije.footer.linkId"~ i), lang) %}
+                    {% if flink.details is not empty %}
+                    <a href="{{ services.category.getURL(flink, lang) }}">{{ flink.details[0].name }}</a>
+                    {% endif %}
+                {% endfor %}
                 {% autoescape false %}
                     <a href="{{ urls.cancellationRights }}">{{ trans("Ceres::Template.footerCancellationRight", {"hyphen": "&shy;"}) }}</a>
                     {% if config("Ceres.footer.cancellation_use_pdf") == "true" %}

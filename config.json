@@ -4,5 +4,29 @@
         "key"       : "footer.linkId1",
         "label"     : "Footer link 1",
         "type"      : "category_select"
+    },
+    {
+        "tab"       : "Footer",
+        "key"       : "footer.linkId2",
+        "label"     : "Footer link 2",
+        "type"      : "category_select"
+    },
+    {
+        "tab"       : "Footer",
+        "key"       : "footer.linkId3",
+        "label"     : "Footer link 3",
+        "type"      : "category_select"
+    },
+    {
+        "tab"       : "Footer",
+        "key"       : "footer.linkId4",
+        "label"     : "Footer link 4",
+        "type"      : "category_select"
+    },
+    {
+        "tab"       : "Footer",
+        "key"       : "footer.linkId5",
+        "label"     : "Footer link 5",
+        "type"      : "category_select"
     }
 ]

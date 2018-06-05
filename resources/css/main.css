@@ -1,3 +1,11 @@
+body, 
+body > #vue-app, 
+body > #vue-error, 
+.page-content,
+.wrapper-main .navbar{
+    background: #fff;
+}
+
 .top-bar .controls-list .control-basket .toggle-basket-preview,
 .top-bar .controls-list .control-basket .toggle-basket-preview:hover,
 .top-bar .controls-list > li a:not(.btn)[aria-expanded="true"], 
@@ -16,9 +24,22 @@ a:hover{
     background-color: #7f273a;
     border-color: #7f273a;
 }
-.btn-primary:hover{
+.btn-primary:hover,
+.btn-primary:focus, 
+.btn-primary.focus,
+.btn-primary:active, 
+.btn-primary.active,
+.open > .btn-primary.dropdown-toggle,
+.btn-primary:active:hover, .btn-primary.active:hover, .open > .btn-primary.dropdown-toggle:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open > .btn-primary.dropdown-toggle:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open > .btn-primary.dropdown-toggle.focus{
     background-color: #994154;
     border-color: #994154;
+}
+
+.footer-content > div:not(.copyright){
+    display:none;
+}
+.footer-content > div.copyright{
+    padding-top: 40px;
 }
 
 @media (min-width: 992px){
@@ -30,5 +51,17 @@ a:hover{
     .no-touch #mainNavbarCollapsable ul.mainmenu > li > ul > li:hover,
     .touch #mainNavbarCollapsable ul.mainmenu > li > ul > li.hover {
         background-color: #7f273a;
+    }
+    #mainNavbarCollapsable ul.mainmenu > li > ul {
+        background: #fff;
+    }
+    #mainNavbarCollapsable ul.mainmenu > li > ul > li {
+        color: #7f273a;
+    }
+}
+
+@media (min-width: 768px){
+    .anicon.anicon-search-xcross[aria-expanded="false"]:hover > .anicon-search-item:after {
+        background: #7f273a;
     }
 }

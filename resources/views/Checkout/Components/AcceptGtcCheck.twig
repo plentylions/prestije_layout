@@ -12,7 +12,7 @@
             {% set cancellationContent %}<!--
                 -->{% set flink2 = services.category.get(config("Prestije.footer.linkId2"), lang) %}
                 {% if flink2.details is not empty %}
-                    <a href="{{ services.category.getURL(flink2, lang) }}" target="_blank"><span>{{ flink2.details[0].name }}</span></a>
+                    <a href="{{ services.category.getURL(flink2, lang) }}" target="_blank"><strong>{{ flink2.details[0].name }}</strong></a>
                 {% endif %}<!--
             -->{% endset %}
 

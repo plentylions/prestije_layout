@@ -44,6 +44,12 @@ class PrestijeServiceProvider extends ServiceProvider
             return false;
         }, self::PRIORITY);
 
+        $dispatcher->listen('IO.tpl.checkout', function (TemplateContainer $container)
+        {
+            $container->setTemplate('Prestije::Checkout.CheckoutView');
+            return false;
+        }, self::PRIORITY);
+
     }
 }
 

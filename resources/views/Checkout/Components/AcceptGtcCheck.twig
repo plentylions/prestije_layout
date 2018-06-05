@@ -1,0 +1,29 @@
+<script type="x/template" id="vue-accept-gtc-check">
+    <label class="form-check-label" for="gtc-accept" v-bind:class="{ 'error': this.showError }">
+        <input class="form-check-input" type="checkbox" value="" id="gtc-accept" v-model="isChecked">
+        
+        {% autoescape false %}
+            {% set gtcContent %}<!--
+                -->{% set flink1 = services.category.get(config("Prestije.footer.linkId1"), lang) %}
+                {% if flink1.details is not empty %}
+                    <a href="{{ services.category.getURL(flink1, lang) }}" target="_blank"><span>{{ flink1.details[0].name }}</span></a>
+                {% endif %}<!--
+            -->{% endset %}
+            {% set cancellationContent %}<!--
+                -->{% set flink2 = services.category.get(config("Prestije.footer.linkId2"), lang) %}
+                {% if flink2.details is not empty %}
+                    <a href="{{ services.category.getURL(flink2, lang) }}" target="_blank"><span>{{ flink2.details[0].name }}</span></a>
+                {% endif %}<!--
+            -->{% endset %}
+
+            {% set policyContent %}<!--
+                -->{% set flink3 = services.category.get(config("Prestije.footer.linkId3"), lang) %}
+                {% if flink3.details is not empty %}
+                    <a href="{{ services.category.getURL(flink3, lang) }}" target="_blank"><span>{{ flink3.details[0].name }}</span></a>
+                {% endif %}<!--
+            -->{% endset %}
+
+            {{ trans("Ceres::Template.checkoutChooseOur", {"gtc": gtcContent, "cancellation": cancellationContent, "policy": policyContent}) }}
+        {% endautoescape %}
+    </label>
+</script>

@@ -13,11 +13,29 @@ body > #vue-error,
     background-color: #7f273a;
 }
 
+.mobile-navigation {
+    background: #7f273a;
+}
+
 a{
     color: #7f273a;
 }
 a:hover{
     color: #994154;
+}
+
+.btn-outline-primary {
+    color: #7f273a;
+    border-color: #7f273a;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus, 
+.btn-outline-primary.focus,
+.btn-outline-primary:active, 
+.btn-outline-primary.active,
+.btn-outline-primary:active:hover, .btn-outline-primary.active:hover, .open > .btn-outline-primary.dropdown-toggle:hover, .btn-outline-primary:active:focus, .btn-outline-primary.active:focus, .open > .btn-outline-primary.dropdown-toggle:focus, .btn-outline-primary:active.focus, .btn-outline-primary.active.focus, .open > .btn-outline-primary.dropdown-toggle.focus{
+    background-color: #7f273a;
+    border-color: #7f273a;
 }
 
 .btn-primary{
@@ -33,6 +51,11 @@ a:hover{
 .btn-primary:active:hover, .btn-primary.active:hover, .open > .btn-primary.dropdown-toggle:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open > .btn-primary.dropdown-toggle:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open > .btn-primary.dropdown-toggle.focus{
     background-color: #994154;
     border-color: #994154;
+}
+
+.cmp-method-list .method-list-item input:checked + label{
+    -webkit-box-shadow: inset 0 0 0 0.1rem #7f273a;
+    box-shadow: inset 0 0 0 0.1rem #7f273a;
 }
 
 .footer-content > div:not(.copyright){
